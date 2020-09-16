@@ -35,6 +35,9 @@ function isBalanced(string $string): bool
 
 $positiveVariants = [
     "Hello world",
+    "[]",
+    "[()]Hello",
+    "",
     "Hello [world]",
     "[Hello world]",
     "{([Hello] ) world}",
@@ -42,6 +45,9 @@ $positiveVariants = [
 ];
 
 $negativeVariants = [
+    "]",
+    "[",
+    "(]",
     "[Hello world",
     "[Hello {world]",
     "Hello )world",
